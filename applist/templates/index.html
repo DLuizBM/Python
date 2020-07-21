@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AppList</title>
+</head>
+<body>
+    <header class="header">
+
+        <h1>List of reservations</h1>
+
+    </header>
+
+    <div class="reservation">
+        <!--https://docs.djangoproject.com/en/3.0/ref/templates/builtins/#-->
+        {% for reservation in Reservation  %}
+            <p> {{ reservation.name }} </p>
+        {% endfor %}
+
+    </div>
+
+    <div class="makereservation">
+        <a href="{% url 'newreservation' %}">
+            <button>New Reservation</button>
+        </a>
+    </div>
+
+    <footer class="footer">
+
+    </footer>
+</body>
+</html>
